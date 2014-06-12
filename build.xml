@@ -2,10 +2,37 @@
 <project name="Yui2Build" default="all">
     <description>YUI2 Top level build file</description>
 
-    <target name="all">
-        <antcall target="execTargetOnAll">
-            <param name="targetName" value="all"/>
-        </antcall>
+    <target name="package-yui-jenkins" depends="clean, all">
+        <mkdir dir="target" />
+        <delete file="target/yui-jenkins.zip" />
+        <zip destfile="target/yui-jenkins.zip">
+            <fileset dir="build">
+                <include name="animation/**/*" />
+                <include name="assets/**/*" />
+                <include name="autocomplete/**/*" />
+                <include name="base/**/*" />
+                <include name="button/**/*" />
+                <include name="connection/**/*" />
+                <include name="container/**/*" />
+                <include name="cookie/**/*" />
+                <include name="datasource/**/*" />
+                <include name="dom/**/*" />
+                <include name="dragdrop/**/*" />
+                <include name="editor/**/*" />
+                <include name="element/**/*" />
+                <include name="event/**/*" />
+                <include name="fonts/**/*" />
+                <include name="logger/**/*" />
+                <include name="menu/**/*" />
+                <include name="resize/**/*" />
+                <include name="storage/**/*" />
+                <include name="tabview/**/*" />
+                <include name="treeview/**/*" />
+                <include name="yahoo/**/*" />
+
+                <exclude name="**/*-coverage.js" />
+            </fileset>
+        </zip>
     </target>
 
     <target name="clean">
@@ -18,6 +45,13 @@
                 <include name="**/*-coverage.js"/>
             </fileset>
         </delete>
+        <delete dir="target" />
+    </target>
+
+    <target name="all">
+        <antcall target="execTargetOnAll">
+            <param name="targetName" value="all"/>
+        </antcall>
     </target>
 
     <target name="execTargetOnAll">

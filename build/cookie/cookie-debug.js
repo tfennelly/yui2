@@ -128,31 +128,30 @@ YAHOO.util.Cookie = {
             
             var decodeValue = (decode === false ? function(s){return s;} : decodeURIComponent);
             
-            //if (/[^=]+=[^=;]?(?:; [^=]+=[^=]?)?/.test(text)){
-                var cookieParts /*:Array*/ = text.split(/;\s/g),
-                    cookieName /*:String*/ = null,
-                    cookieValue /*:String*/ = null,
-                    cookieNameValue /*:Array*/ = null;
+            var cookieParts /*:Array*/ = text.split(/;\s/g),
+                cookieName /*:String*/ = null,
+                cookieValue /*:String*/ = null,
+                cookieNameValue /*:Array*/ = null;
+            
+            for (var i=0, len=cookieParts.length; i < len; i++){
                 
-                for (var i=0, len=cookieParts.length; i < len; i++){
-                    
-                    //check for normally-formatted cookie (name-value)
-                    cookieNameValue = cookieParts[i].match(/([^=]+)=/i);
-                    if (cookieNameValue instanceof Array){
-                        try {
-                            cookieName = decodeURIComponent(cookieNameValue[1]);
-                            cookieValue = decodeValue(cookieParts[i].substring(cookieNameValue[1].length+1));
-                        } catch (ex){
-                            //ignore the entire cookie - encoding is likely invalid
-                        }
-                    } else {
-                        //means the cookie does not have an "=", so treat it as a boolean flag
-                        cookieName = decodeURIComponent(cookieParts[i]);
-                        cookieValue = "";
+                //check for normally-formatted cookie (name-value)
+                cookieNameValue = cookieParts[i].match(/([^=]+)=/i);
+                if (cookieNameValue instanceof Array){
+                    try {
+                        cookieName = decodeURIComponent(cookieNameValue[1]);
+                        cookieValue = decodeValue(cookieParts[i].substring(cookieNameValue[1].length+1));
+                    } catch (ex){
+                        //ignore the entire cookie - encoding is likely invalid
                     }
-                    cookies[cookieName] = cookieValue;
+                } else {
+                    //means the cookie does not have an "=", so treat it as a boolean flag
+                    cookieName = decodeURIComponent(cookieParts[i]);
+                    cookieValue = "";
                 }
-            //}
+                cookies[cookieName] = cookieValue;
+            }
+
         }
         
         return cookies;
@@ -472,5 +471,4 @@ YAHOO.util.Cookie = {
     }
 
 };
-
 YAHOO.register("cookie", YAHOO.util.Cookie, {version: "@VERSION@", build: "@BUILD@"});

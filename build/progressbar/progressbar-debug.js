@@ -744,5 +744,4 @@
 	b[1][DIRECTION_BTT] = b[1][DIRECTION_TTB]; 
 				
 })();
-
 YAHOO.register("progressbar", YAHOO.widget.ProgressBar, {version: "@VERSION@", build: "@BUILD@"});

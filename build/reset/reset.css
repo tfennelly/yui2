@@ -115,3 +115,5 @@ sub {
 legend {
 	color: #000;
 }
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.reset { display: none; }

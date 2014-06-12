@@ -547,5 +547,4 @@ YAHOO.tool.Profiler = function(){
     };
 
 }();  
-
 YAHOO.register("profiler", YAHOO.tool.Profiler, {version: "@VERSION@", build: "@BUILD@"});

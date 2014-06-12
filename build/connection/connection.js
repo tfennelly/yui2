@@ -961,7 +961,6 @@ YAHOO.util.Connect =
         }
     }
 };
-
 /**
   * @for YAHOO.util.Connect
   */
@@ -978,10 +977,10 @@ YAHOO.util.Connect =
     */
 	function _swf(uri) {
 		var o = '<object id="YUIConnectionSwf" type="application/x-shockwave-flash" data="' +
-				uri + '" width="0" height="0">' +
-				'<param name="movie" value="' + uri + '">' +
-				'<param name="allowScriptAccess" value="always">' +
-				'</object>',
+		        uri + '" width="0" height="0">' +
+		     	'<param name="movie" value="' + uri + '">' +
+                '<param name="allowScriptAccess" value="always">' +
+		    	'</object>',
 		    c = document.createElement('div');
 
 		document.body.appendChild(c);
@@ -1089,7 +1088,6 @@ YAHOO.util.Connect =
 	YCM.xdrReady = _xdrReady;
 	YCM.handleXdrResponse = _handleXdrResponse;
 })();
-
 /**
   * @for YAHOO.util.Connect
   */
@@ -1557,5 +1555,4 @@ YAHOO.util.Connect =
 	YCM.appendPostData = _appendPostData;
 	YCM.uploadFile = _uploadFile;
 })();
-
 YAHOO.register("connection", YAHOO.util.Connect, {version: "@VERSION@", build: "@BUILD@"});

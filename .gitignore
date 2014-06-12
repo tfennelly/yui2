@@ -1,5 +1,6 @@
 build_tmp/
 build_rollup_tmp/
+target
 .DS_Store
 .*.swp
 .svn

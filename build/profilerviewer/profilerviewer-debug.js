@@ -1221,5 +1221,4 @@
     };
 	
 })();
-
 YAHOO.register("profilerviewer", YAHOO.widget.ProfilerViewer, {version: "@VERSION@", build: "@BUILD@"});

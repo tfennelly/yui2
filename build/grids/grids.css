@@ -457,3 +457,5 @@ body {
 .yui-gf {
 	zoom: 1;
 }
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.grids { display: none; }

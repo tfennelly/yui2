@@ -2560,7 +2560,6 @@ util.DataSource = function(oLiveData, oConfigs) {
 lang.augmentObject(util.DataSource, DS);
 
 })();
-
 /****************************************************************************/
 /****************************************************************************/
 /****************************************************************************/
@@ -3123,5 +3122,4 @@ var xPad=function (x, pad, r)
  YAHOO.util.DateLocale['en-AU'] = YAHOO.lang.merge(YAHOO.util.DateLocale['en']);
 
 })();
-
 YAHOO.register("datasource", YAHOO.util.DataSource, {version: "@VERSION@", build: "@BUILD@"});
