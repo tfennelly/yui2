@@ -10,8 +10,7 @@ To build the Jenkins specific package:
 ant package-yui-jenkins
 ```
 
-This produces a .zip fie in the `target` folder.  That zip can be expanded into the
-`war/src/main/webapp/scripts/yui` folder in Jenkins.
+This produces a .zip file in the `target` folder.  That zip can be expanded into the `war/src/main/webapp/scripts/yui` folder in Jenkins.
 
 ## Changelog (pre fork)
 

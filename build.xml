@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Yui2Build" default="all">
+<project name="Yui2Build" default="package-yui-jenkins">
     <description>YUI2 Top level build file</description>
 
     <target name="package-yui-jenkins" depends="clean, all">
@@ -30,6 +30,8 @@
                 <include name="treeview/**/*" />
                 <include name="yahoo/**/*" />
 
+                <include name="buildrev.txt" />
+
                 <exclude name="**/*-coverage.js" />
             </fileset>
         </zip>
@@ -52,6 +54,11 @@
         <antcall target="execTargetOnAll">
             <param name="targetName" value="all"/>
         </antcall>
+        <exec executable="bash" osfamily="unix">
+            <arg value="-c"/>
+            <arg value="git log -n 1 | grep commit | sed 's/commit \(.*\)/Build revision \1/g'"/>
+            <redirector output="build/buildrev.txt" />
+        </exec>
     </target>
 
     <target name="execTargetOnAll">
