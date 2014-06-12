@@ -1519,7 +1519,7 @@
             }
 
 
-            if (this._activationButtonPressed || this._bOptionPressed) {
+            if (this.isActive() || this._bOptionPressed) {
         
                 Event.removeListener(document, "mouseup", this._onDocumentMouseUp);
         
@@ -1577,7 +1577,7 @@
             }
         
 
-            if (this._activationButtonPressed || this._bOptionPressed) {
+            if (this.isActive() || this._bOptionPressed) {
         
                 Event.on(document, "mouseup", this._onDocumentMouseUp, null, this);
         
