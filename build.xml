@@ -2,13 +2,27 @@
 <project name="Yui2Build" default="package-yui-jenkins">
     <description>YUI2 Top level build file</description>
 
-    <target name="package-yui-jenkins" depends="clean, all">
+    <target name="package-yui-jenkins">
+        <property name="jenkins-zip" value="target/yui-jenkins.zip" />
+
         <mkdir dir="target" />
-        <delete file="target/yui-jenkins.zip" />
-        <zip destfile="target/yui-jenkins.zip">
+
+        <!-- Assemble all "assets" into the top level "assets" folder, excluding "*-skin.css". -->
+        <property name="assets-assemble" value="target/asset-assemble" />
+        <delete dir="${assets-assemble}" failonerror="false" />
+        <mkdir dir="${assets-assemble}/assets/skins/sam" />
+        <copy todir="${assets-assemble}/assets/skins/sam" flatten="true">
+            <fileset dir="build">
+                <include name="assets/skins/sam/**/*" />
+                <include name="*/assets/skins/sam/**/*" />
+                <exclude name="*/assets/skins/sam/**/*-skin.css" />
+            </fileset>
+        </copy>
+
+        <delete file="${jenkins-zip}" />
+        <zip destfile="${jenkins-zip}">
             <fileset dir="build">
                 <include name="animation/**/*" />
-                <include name="assets/**/*" />
                 <include name="autocomplete/**/*" />
                 <include name="base/**/*" />
                 <include name="button/**/*" />
@@ -34,7 +48,10 @@
 
                 <exclude name="**/*-coverage.js" />
             </fileset>
+            <fileset dir="${assets-assemble}" />
+
         </zip>
+
     </target>
 
     <target name="clean">
@@ -47,7 +64,7 @@
                 <include name="**/*-coverage.js"/>
             </fileset>
         </delete>
-        <delete dir="target" />
+        <delete dir="target" failonerror="false" />
     </target>
 
     <target name="all">
