@@ -30,7 +30,7 @@
                 <include name="treeview/**/*" />
                 <include name="yahoo/**/*" />
 
-                <include name="buildrev.txt" />
+                <include name="README.md" />
 
                 <exclude name="**/*-coverage.js" />
             </fileset>
