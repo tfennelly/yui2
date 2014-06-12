@@ -8,3 +8,6 @@ CVS/
 *~
 # Ignore Emacs auto saved files
 *#*#
+# Ignore IntelliJ files
+.idea
+*.iml
