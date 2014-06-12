@@ -57,7 +57,7 @@
         <exec executable="bash" osfamily="unix">
             <arg value="-c"/>
             <arg value="git log -n 1 | grep commit | sed 's/commit \(.*\)/These YUI resources were assembled from revision `\1` of the Jenkins YUI2 fork\.  __DO NOT MODIFY THESE SOURCES !!!__/g'"/>
-            <redirector output="build/README.md" append="true"/>
+            <redirector output="build/README.md"/>
         </exec>
     </target>
 

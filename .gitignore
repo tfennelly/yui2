@@ -1,6 +1,7 @@
 build_tmp/
 build_rollup_tmp/
 target
+build/README.md
 .DS_Store
 .*.swp
 .svn
