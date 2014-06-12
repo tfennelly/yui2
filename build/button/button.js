@@ -1498,7 +1498,7 @@
             }
 
 
-            if (this._activationButtonPressed || this._bOptionPressed) {
+            if (this.isActive() || this._bOptionPressed) {
         
                 Event.removeListener(document, "mouseup", this._onDocumentMouseUp);
         
@@ -1556,7 +1556,7 @@
             }
         
 
-            if (this._activationButtonPressed || this._bOptionPressed) {
+            if (this.isActive() || this._bOptionPressed) {
         
                 Event.on(document, "mouseup", this._onDocumentMouseUp, null, this);
         
@@ -3695,8 +3695,14 @@
 
 
 				if (UA.ie) {
-				
-					oYUISubmitButton.get("element").fireEvent("onclick");
+
+                    if (UA.ie < 9) {
+                        oYUISubmitButton.get("element").fireEvent("onclick");
+                    } else {
+                        oEvent = document.createEvent("HTMLEvents");
+                        oEvent.initEvent("click", true, true);
+                        oYUISubmitButton.get("element").dispatchEvent(oEvent);
+                    }
 				
 				}
 				else {
