@@ -3057,5 +3057,4 @@ YAHOO.widget.AutoComplete._cloneObject = function(o) {
 
 
 
-
 YAHOO.register("autocomplete", YAHOO.widget.AutoComplete, {version: "@VERSION@", build: "@BUILD@"});

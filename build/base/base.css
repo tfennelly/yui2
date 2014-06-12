@@ -129,3 +129,5 @@ input[type="submit"] {
  img {
     -ms-interpolation-mode:bicubic;
 }
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.base { display: none; }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Yui2Build" default="all">
+    <description>YUI2 Top level build file</description>
+
+    <target name="all">
+        <antcall target="execTargetOnAll">
+            <param name="targetName" value="all"/>
+        </antcall>
+    </target>
+
+    <target name="clean">
+        <antcall target="execTargetOnAll">
+            <param name="targetName" value="clean"/>
+        </antcall>
+        <!-- delete the coverage scripts. -->
+        <delete>
+            <fileset dir="build">
+                <include name="**/*-coverage.js"/>
+            </fileset>
+        </delete>
+    </target>
+
+    <target name="execTargetOnAll">
+        <ant dir="src/animation" target="${targetName}"/>
+        <ant dir="src/autocomplete" target="${targetName}"/>
+        <ant dir="src/base" target="${targetName}"/>
+        <ant dir="src/button" target="${targetName}"/>
+        <ant dir="src/calendar" target="${targetName}"/>
+        <ant dir="src/carousel" target="${targetName}"/>
+        <!--<ant dir="src/charts" target="${targetName}"/>-->
+        <ant dir="src/colorpicker" target="${targetName}"/>
+        <ant dir="src/connection" target="${targetName}"/>
+        <ant dir="src/container" target="${targetName}"/>
+        <ant dir="src/cookie" target="${targetName}"/>
+        <ant dir="src/datasource" target="${targetName}"/>
+        <ant dir="src/datatable" target="${targetName}"/>
+        <ant dir="src/datemath" target="${targetName}"/>
+        <ant dir="src/dom" target="${targetName}"/>
+        <ant dir="src/dragdrop" target="${targetName}"/>
+        <ant dir="src/editor" target="${targetName}"/>
+        <ant dir="src/element" target="${targetName}"/>
+        <ant dir="src/element-delegate" target="${targetName}"/>
+        <ant dir="src/event" target="${targetName}"/>
+        <ant dir="src/event-delegate" target="${targetName}"/>
+        <ant dir="src/event-mouseenter" target="${targetName}"/>
+        <ant dir="src/event-simulate" target="${targetName}"/>
+        <ant dir="src/fonts" target="${targetName}"/>
+        <ant dir="src/get" target="${targetName}"/>
+        <ant dir="src/grids" target="${targetName}"/>
+        <ant dir="src/history" target="${targetName}"/>
+        <ant dir="src/imagecropper" target="${targetName}"/>
+        <ant dir="src/imageloader" target="${targetName}"/>
+        <ant dir="src/json" target="${targetName}"/>
+        <ant dir="src/layout" target="${targetName}"/>
+        <ant dir="src/logger" target="${targetName}"/>
+        <ant dir="src/menu" target="${targetName}"/>
+        <ant dir="src/paginator" target="${targetName}"/>
+        <ant dir="src/profiler" target="${targetName}"/>
+        <ant dir="src/profilerviewer" target="${targetName}"/>
+        <ant dir="src/progressbar" target="${targetName}"/>
+        <ant dir="src/reset" target="${targetName}"/>
+        <ant dir="src/resize" target="${targetName}"/>
+        <ant dir="src/selector" target="${targetName}"/>
+        <ant dir="src/slider" target="${targetName}"/>
+        <ant dir="src/storage" target="${targetName}"/>
+        <ant dir="src/stylesheet" target="${targetName}"/>
+        <ant dir="src/swf" target="${targetName}"/>
+        <ant dir="src/swfdetect" target="${targetName}"/>
+        <!--<ant dir="src/swfstore" target="${targetName}"/>-->
+        <ant dir="src/tabview" target="${targetName}"/>
+        <ant dir="src/treeview" target="${targetName}"/>
+        <!--<ant dir="src/uploader" target="${targetName}"/>-->
+        <ant dir="src/yahoo" target="${targetName}"/>
+        <ant dir="src/yuiloader" target="${targetName}"/>
+        <ant dir="src/yuitest" target="${targetName}"/>
+    </target>
+</project>
