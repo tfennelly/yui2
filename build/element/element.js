@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * Provides Attribute configurations.
  * @namespace YAHOO.util
@@ -1090,4 +1096,4 @@ YAHOO.augment(Element, AttributeProvider);
 YAHOO.util.Element = Element;
 })();
 
-YAHOO.register("element", YAHOO.util.Element, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("element", YAHOO.util.Element, {version: "2.9.0", build: "2900_jenkins"});

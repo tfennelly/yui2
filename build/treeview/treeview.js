@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 (function () {
     var Dom = YAHOO.util.Dom,
         Event = YAHOO.util.Event,
@@ -4034,4 +4040,4 @@ YAHOO.widget.TVFadeOut.prototype = {
         return "TVFadeOut";
     }
 };
-YAHOO.register("treeview", YAHOO.widget.TreeView, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("treeview", YAHOO.widget.TreeView, {version: "2.9.0", build: "2900_jenkins"});

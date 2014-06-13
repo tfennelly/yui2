@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 
 /**
  * The CustomEvent class lets you define events for your application
@@ -2528,4 +2534,4 @@ KeyListener.KEY = {
 };
 
 })();
-YAHOO.register("event", YAHOO.util.Event, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("event", YAHOO.util.Event, {version: "2.9.0", build: "2900_jenkins"});

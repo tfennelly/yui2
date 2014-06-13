@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * Provides methods to parse JSON strings and convert objects to JSON strings.
  *
@@ -533,4 +539,4 @@ YAHOO.lang.JSON = {
 YAHOO.lang.JSON.isValid = YAHOO.lang.JSON.isSafe;
 
 })();
-YAHOO.register("json", YAHOO.lang.JSON, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("json", YAHOO.lang.JSON, {version: "2.9.0", build: "2900_jenkins"});

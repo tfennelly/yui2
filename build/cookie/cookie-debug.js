@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * Utilities for cookie management
  * @namespace YAHOO.util
@@ -471,4 +477,4 @@ YAHOO.util.Cookie = {
     }
 
 };
-YAHOO.register("cookie", YAHOO.util.Cookie, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("cookie", YAHOO.util.Cookie, {version: "2.9.0", build: "2900_jenkins"});

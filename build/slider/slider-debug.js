@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * The Slider component is a UI control that enables the user to adjust 
  * values in a finite range along one or two axes. Typically, the Slider 
@@ -2105,4 +2111,4 @@ YW.Slider.getVertDualSlider =
 YAHOO.widget.DualSlider = DualSlider;
 
 })();
-YAHOO.register("slider", YAHOO.widget.Slider, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("slider", YAHOO.widget.Slider, {version: "2.9.0", build: "2900_jenkins"});

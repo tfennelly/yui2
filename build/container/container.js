@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 (function () {
 
     /**
@@ -9269,4 +9275,4 @@
     YAHOO.lang.augmentProto(ContainerEffect, YAHOO.util.EventProvider);
 
 })();
-YAHOO.register("container", YAHOO.widget.Module, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("container", YAHOO.widget.Module, {version: "2.9.0", build: "2900_jenkins"});

@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * The ImageLoader Utility is a framework to dynamically load images according to certain triggers,
  * enabling faster load times and a more responsive UI.
@@ -488,4 +494,4 @@ YAHOO.util.ImageLoader.pngBgImgObj.prototype._applyUrl = function(el) {
 		el.style.backgroundImage = "url('" + this.url + "')";
 	}
 };
-YAHOO.register("imageloader", YAHOO.util.ImageLoader, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("imageloader", YAHOO.util.ImageLoader, {version: "2.9.0", build: "2900_jenkins"});

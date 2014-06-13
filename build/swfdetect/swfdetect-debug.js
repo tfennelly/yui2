@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * Utility for Flash version detection
  * @namespace YAHOO.util
@@ -104,4 +110,4 @@ YAHOO.util.SWFDetect = {
 		}			
 	};
 })();
-YAHOO.register("swfdetect", YAHOO.util.SWFDetect, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("swfdetect", YAHOO.util.SWFDetect, {version: "2.9.0", build: "2900_jenkins"});

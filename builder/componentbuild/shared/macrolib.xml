@@ -118,10 +118,10 @@
         <element name="filters" optional="true" description="Additonal filters to apply to individual files"/>
 
         <sequential>
-            <echo level="verbose">Concatenating</echo>
-            <echo level="verbose">    Source Files : @{sourcefiles}</echo>
-            <echo level="verbose">    In Source Dir : @{sourcedir}</echo>
-            <echo level="verbose">    To : @{destfile}</echo>
+            <echo level="info">Concatenating</echo>
+            <echo level="info">    Source Files : @{sourcefiles}</echo>
+            <echo level="info">    In Source Dir : @{sourcedir}</echo>
+            <echo level="info">    To : @{destfile}</echo>
 
             <delete dir="@{workingdir}" quiet="true"/>
             <copy todir="@{workingdir}">
@@ -240,12 +240,16 @@
         <attribute name="module" />
         <attribute name="classname" />
         <attribute name="file" />
+        <attribute name="version" />
+        <attribute name="build" />
         <sequential>
             <loadfile srcfile="${builddir}/files/versioncode.txt" property="@{module}-@{classname}-version" >
                 <filterchain>
                     <replacetokens>
                         <token key="MODULE" value="@{module}"/>
                         <token key="CLASSNAME" value="@{classname}"/>
+                        <token key="VERSION" value="@{version}"/>
+                        <token key="BUILD" value="@{build}"/>
                     </replacetokens>
                 </filterchain>
             </loadfile>

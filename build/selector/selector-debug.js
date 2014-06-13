@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 var Y = YAHOO,
     Y_DOM = YAHOO.util.Dom, 
     EMPTY_ARRAY = [],
@@ -969,4 +975,4 @@ Y_mix(Selector.operators, {
 Selector.combinators['~'] = {
     axis: 'previousSibling'
 };
-YAHOO.register("selector", YAHOO.util.Selector, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("selector", YAHOO.util.Selector, {version: "2.9.0", build: "2900_jenkins"});

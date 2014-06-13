@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * The Storage module manages client-side data storage.
  * @module Storage
@@ -1234,4 +1240,4 @@ var Y = YAHOO,
     StorageManager.register(StorageEngineSWF);
 	Util.StorageEngineSWF = StorageEngineSWF;
 }());
-YAHOO.register("storage", YAHOO.util.Storage, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("storage", YAHOO.util.Storage, {version: "2.9.0", build: "2900_jenkins"});

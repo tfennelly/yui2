@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * The dom module provides helper methods for manipulating Dom elements.
  * @module dom
@@ -1876,4 +1882,4 @@ Y.Dom.Color = {
     }
 };
 }());
-YAHOO.register("dom", YAHOO.util.Dom, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("dom", YAHOO.util.Dom, {version: "2.9.0", build: "2900_jenkins"});

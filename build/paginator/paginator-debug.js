@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 (function () {
 /**
  * The Paginator widget provides a set of controls to navigate through paged
@@ -2627,4 +2633,4 @@ Paginator.ui.JumpToPageDropdown.prototype = {
 };
 
 })();
-YAHOO.register("paginator", YAHOO.widget.Paginator, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("paginator", YAHOO.widget.Paginator, {version: "2.9.0", build: "2900_jenkins"});

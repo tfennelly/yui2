@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * Augments the Event Utility with a <code>delegate</code> method that 
  * facilitates easy creation of delegated event listeners.  (Note: Using CSS 
@@ -274,4 +280,4 @@
 	});
 
 }());
-YAHOO.register("event-delegate", YAHOO.util.Event, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("event-delegate", YAHOO.util.Event, {version: "2.9.0", build: "2900_jenkins"});

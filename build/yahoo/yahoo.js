@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * The YAHOO object is the single global object used by YUI Library.  It
  * contains utility function for setting up namespaces, inheritance, and
@@ -1220,4 +1226,4 @@ YAHOO.augment = L.augmentProto;
 YAHOO.extend = L.extend;
 
 })();
-YAHOO.register("yahoo", YAHOO, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("yahoo", YAHOO, {version: "2.9.0", build: "2900_jenkins"});

@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * Provides a mechanism to fetch remote resources and
  * insert them into a document
@@ -791,4 +797,4 @@ YAHOO.util.Get = function() {
     };
 }();
 
-YAHOO.register("get", YAHOO.util.Get, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("get", YAHOO.util.Get, {version: "2.9.0", build: "2900_jenkins"});

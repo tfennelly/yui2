@@ -32,11 +32,11 @@
     </target>
 
     <target name="-concatdebug">
-        <concatsource destfile="${component.builddir}/${component.basefilename}-debug.js" sourcedir="${component.jsfiles.base}" sourcefiles="${component.jsfiles}" />
+        <concatsource destfile="${component.builddir}/${component.basefilename}-debug.js" sourcedir="${component.jsfiles.base}" sourcefiles="${module.basedir}/../files/license.txt, ${component.jsfiles}" />
     </target>
 
     <target name="-registerdebug" unless="register.skip">
-        <registerversion classname="${component.mainclass}" module="${component.module}" file="${component.builddir}/${component.basefilename}-debug.js" />
+        <registerversion classname="${component.mainclass}" module="${component.module}" version="${version}" build="${build}" file="${component.builddir}/${component.basefilename}-debug.js" />
     </target>
 
     <!-- SKINS -->
@@ -45,8 +45,13 @@
     </target>
 
     <target name="-concatskins" if="component.skins.exist">
-        <concatsource destfile="${component.builddir}/assets/skins/sam/${component}.css" sourcedir="${component.assets.base}" sourcefiles="${component}-core.css, skins/sam/${component}-skin.css" />
-        <yuicompress src="${component.builddir}/assets/skins/sam/${component}.css" dest="${component.builddir}/assets/skins/sam/${component}.css" args="${yuicompressor.css.args.internal}" />
+        <property name="component-css-file" value="${component.builddir}/assets/skins/sam/${component}.css" />
+
+        <concatsource destfile="${component-css-file}" sourcedir="${component.assets.base}" sourcefiles="${component}-core.css, skins/sam/${component}-skin.css" />
+        <yuicompress src="${component-css-file}" dest="${component-css-file}_compressed.css" args="${yuicompressor.css.args.internal}" />
+
+        <!-- Re-add the license to the compressed file -->
+        <concatsource destfile="${component-css-file}" sourcedir="${component.assets.base}" sourcefiles="${module.basedir}/../files/license.txt, ${component-css-file}_compressed.css" />
     </target>
 
 </project>

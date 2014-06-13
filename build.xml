@@ -2,7 +2,10 @@
 <project name="Yui2Build" default="package-yui-jenkins">
     <description>YUI2 Top level build file</description>
 
-    <target name="package-yui-jenkins">
+    <property name="version" value="2.9.0" />
+    <property name="build" value="2900_jenkins" />
+
+    <target name="package-yui-jenkins" depends="clean, all">
         <property name="jenkins-zip" value="target/yui-jenkins.zip" />
 
         <mkdir dir="target" />
@@ -18,6 +21,17 @@
                 <exclude name="*/assets/skins/sam/**/*-skin.css" />
             </fileset>
         </copy>
+        <replace dir="${assets-assemble}/assets/skins/sam" includes="**/*.css" token="../../../../assets/skins/sam/sprite.png" value="sprite.png" />
+
+        <!-- create the skin.css file... -->
+        <fileset id="raw_compressed" dir="${assets-assemble}/assets/skins/sam" includes="*_compressed.css" />
+        <concat destfile="${assets-assemble}/assets/skins/sam/skin.css" fixlastline="true">
+            <file file="builder/componentbuild/files/license.txt" />
+            <fileset refid="raw_compressed" />
+        </concat>
+        <delete>
+            <fileset refid="raw_compressed" />
+        </delete>
 
         <delete file="${jenkins-zip}" />
         <zip destfile="${jenkins-zip}">
@@ -62,6 +76,7 @@
         <delete>
             <fileset dir="build">
                 <include name="**/*-coverage.js"/>
+                <include name="**/*_compressed.css"/>
             </fileset>
         </delete>
         <delete dir="target" failonerror="false" />

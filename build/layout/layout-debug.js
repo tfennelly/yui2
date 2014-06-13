@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * @description <p>Provides a fixed layout containing, top, bottom, left, right and center layout units. It can be applied to either the body or an element.</p>
  * @namespace YAHOO.widget
@@ -2309,4 +2315,4 @@
 
     YAHOO.widget.LayoutUnit = LayoutUnit;
 })();
-YAHOO.register("layout", YAHOO.widget.Layout, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("layout", YAHOO.widget.Layout, {version: "2.9.0", build: "2900_jenkins"});

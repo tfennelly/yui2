@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  *
  * @module progressbar
@@ -730,4 +736,4 @@
 	b[1][DIRECTION_BTT] = b[1][DIRECTION_TTB]; 
 				
 })();
-YAHOO.register("progressbar", YAHOO.widget.ProgressBar, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("progressbar", YAHOO.widget.ProgressBar, {version: "2.9.0", build: "2900_jenkins"});

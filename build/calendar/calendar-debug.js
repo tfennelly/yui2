@@ -1082,6 +1082,12 @@ YAHOO.widget.DateMath = {
         return dt;
     }
 };
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
 * The Calendar component is a UI control that enables users to choose one or more dates from a graphical calendar presented in a one-month or
 * multi-month interface. Calendars are generated entirely via script and can be navigated without any page refreshes.
@@ -7414,4 +7420,4 @@ YAHOO.widget.CalendarNavigator.prototype = {
     __isMac : (navigator.userAgent.toLowerCase().indexOf("macintosh") != -1)
 
 };
-YAHOO.register("calendar", YAHOO.widget.Calendar, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("calendar", YAHOO.widget.Calendar, {version: "2.9.0", build: "2900_jenkins"});

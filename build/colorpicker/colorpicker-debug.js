@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * Provides color conversion and validation utils
  * @class YAHOO.util.Color
@@ -1775,4 +1781,4 @@ YAHOO.util.Color = function() {
 
     YAHOO.widget.ColorPicker = ColorPicker;
 })();
-YAHOO.register("colorpicker", YAHOO.widget.ColorPicker, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("colorpicker", YAHOO.widget.ColorPicker, {version: "2.9.0", build: "2900_jenkins"});

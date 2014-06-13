@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
 /**
  * The Connection Manager provides a simplified interface to the XMLHttpRequest
  * object.  It handles cross-browser instantiantion of XMLHttpRequest, negotiates the
@@ -1585,4 +1591,4 @@ YAHOO.util.Connect =
 	YCM.appendPostData = _appendPostData;
 	YCM.uploadFile = _uploadFile;
 })();
-YAHOO.register("connection", YAHOO.util.Connect, {version: "@VERSION@", build: "@BUILD@"});
+YAHOO.register("connection", YAHOO.util.Connect, {version: "2.9.0", build: "2900_jenkins"});
